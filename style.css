@@ -1,0 +1,153 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Container styles */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0ffeba, #5b548a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* To-Do App Styles */
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px 30px 70px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+/* Row styles for input and button */
+.row {
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 12px 30px;
+  background: #0ffeba;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background 0.3s;
+  
+}
+
+button:hover {
+  background: #e04a3c;
+}
+
+/* List styles */
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(checked.jpeg);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: black;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #ff5945;
+}
+
+ul li span:hover {
+  background: #edeef0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .todo-app {
+    padding: 30px 20px 50px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 13px;
+  }
+}

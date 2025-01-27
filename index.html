@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Added language attribute for better accessibility -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enhanced viewport for responsiveness -->
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css" type="text/css" /> <!-- Linked external CSS for styling -->
+</head>
+
+<body>
+
+  <!-- Main container for the app -->
+  <div class="container">
+    <div class="todo-app">
+      <!-- App title -->
+      <h2>To-Do List 
+        <img src="icon.png" alt="App Icon"> <!-- Added 'alt' attribute for better accessibility -->
+      </h2>
+
+      <!-- Input row for adding tasks -->
+      <div class="row">
+        <input type="text" id="input-box" placeholder="Add Your Task" aria-label="Task Input Field"> <!-- Added aria-label for accessibility -->
+        <button onclick="addTask()" aria-label="Add Task Button">Add</button> <!-- Added aria-label -->
+      </div>
+
+      <!-- Unordered list to display tasks -->
+      <ul id="list-container">
+        <!-- Placeholder tasks (commented out for demonstration) -->
+        <!-- 
+        <li class="checked">Task 1</li>
+        <li>Task 2</li>
+        <li>Task 3</li> 
+        -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Link to the JavaScript file -->
+  <script src="main.js"></script> <!-- Moved the JavaScript logic into an external file -->
+</body>
+</html>
